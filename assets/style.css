@@ -1,0 +1,25 @@
+
+
+/* main .card {
+    flex-direction: row;
+    display: flex;
+    width: 15%;
+    padding: 25px;
+    margin: 25px;
+    
+} */
+.card {
+ margin-top: 200px;
+  margin-left: 20px;
+  
+    
+}
+
+.container {
+    position: absolute;
+    margin: 200px;
+}
+
+.row {
+    padding: 65px;
+}
