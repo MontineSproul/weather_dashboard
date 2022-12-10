@@ -3634,8 +3634,8 @@ textarea.form-control-lg {
 }
 
 .btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split {
-  padding-right: 1.6875rem;
-  padding-left: 1.6875rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
 
 .btn-group.show .dropdown-toggle {
@@ -7121,6 +7121,7 @@ textarea.form-control-lg {
 
 .d-flex {
   display: flex !important;
+  
 }
 
 .d-inline-flex {

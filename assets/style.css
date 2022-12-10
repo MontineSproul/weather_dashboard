@@ -8,8 +8,15 @@
     margin: 25px;
     
 } */
+.one {
+    margin-top: 0px;
+    padding-bottom: 0px;
+}
+.two {
+    padding-top: 0%;
+}
 .card {
- margin-top: 200px;
+ margin-top: 50px;
   margin-left: 20px;
   
     
@@ -17,9 +24,14 @@
 
 .container {
     position: absolute;
-    margin: 200px;
+    margin: 100px;
 }
 
 .row {
     padding: 65px;
+}
+
+.p-1 {
+    margin-right: 15px;
+    border-radius: 5;
 }

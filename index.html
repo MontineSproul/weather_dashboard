@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./bootswatch.css">
     <link rel="stylesheet" href="./assets/style.css">
     
@@ -19,50 +18,83 @@
                 <span class="navbar-toggler-icon"></span>
               </button>
                 <form class="d-flex">
-                  <input class="form-control me-sm-2" type="text" placeholder="Search">
-                  <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search for a city...</button>
+                  <input class="p-1" id="city" type="text" placeholder="  Search for a city...">
+                  <button type="button" class="btn btn-primary btn-sm">Search</button>
                 </form>
             </div>
           </nav>
     </header>
 <section class="contianer align-self-center">
-    <div class="row">
+    <div class="row one">
         <div class="card bg-secondary mb-3 col-sm-6 " id="card1" style="max-width: 20rem;">
-            <div class="card-header ">Today</div>
-            <div class="card-body">
-            <h4 class="card-title">atlanta</h4>
-            <p class="card-text">goadhgoawhrsoghjsdfkgjal;skdfjgdlskxfjghodslkfjglsdkjfglkdsjflgjsd;ofgj;ajesdofhjgosdhfoghjo;ajdfpgcjsdofjgosjdfogjc</p>
+            <div class="card-header dayDate">Today</div>
+            <div class="weather">
+            <h2 class="city">Atlanta</h2>
+            <div class="degrees">50℉</div>
+            <div class="realFeel">Real Feel 48℉</div>
+            <icon></icon>
+            <div class="description">overcast</div>
+           
             </div>
         </div>
         <div class="card bg-secondary mb-3 col-sm-6 " style="max-width: 20rem;">
             <div class="card-header ">Tomorrow</div>
-             <div class="card-body ">
-                  <h4 class="card-title"></h4>
-                  <p class="card-text"></p>
+             <div class="weather ">
+                  <h2 class="city">City</h2>
+                  <div class="degrees">50℉</div>
+                  <div class="realFeel">Real Feel 48℉</div>
+                  <icon></icon>
+                  <div class="description">sunny</div>
+                
             </div>
          </div>    
          <div class="card bg-secondary mb-3 col-sm-6 " style="max-width: 20rem;">
             <!-- add date/moments to put the day of the week for the next 5 days -->
-        <div class="card-header ">Header</div>
-        <div class="card-body ">
-                <h4 class="card-title">city</h4>
-                  <p class="card-text">goadhgoawhrsoghjsdfkgjal;skdfjgdlskxfjghodslkfjglsdkjfglkdsjflgjsd;ofgj;ajesdofhjgosdhfoghjo;ajdfpgcjsdofjgosjdfogjc</p>
+        <div class="card-header ">Today is</div>
+        <div class="weather ">
+                <h2 class="city">city</h2>
+                <div class="degrees">50℉</div>
+                <div class="realFeel">Real Feel 48℉</div>
+                <icon></icon>
+                <div class="description">rainy</div>
+                 
         </div>
         </div>
+    </div>
+    <div class="row two">
         <div class="card bg-secondary mb-3 col-sm-6 " style="max-width: 20rem;">
-        <div class="card-header ">Header</div>
-        <div class="card-body ">
-                <h4 class="card-title"></h4>
+        <div class="card-header ">Today is</div>
+        <div class="weather">
+                <h2 class="city">City</h2>
+                <div class="degrees">50℉</div>
+                <div class="realFeel">Real Feel 48℉</div>
+                <icon></icon>
+                <div class="description">snow</div>
                      <p class="card-text"></p>
         </div>
         </div>
          <div class="card bg-secondary mb-3 col-sm-6 " style="max-width: 20rem;">
-        <div class="card-header ">Header</div>
-        <div class="card-body ">
-             <h4 class="card-title">city</h4>
-                <p class="card-text">goadhgoawhrsoghjsdfkgjal;skdfjgdlskxfjghodslkfjglsdkjfglkdsjflgjsd;ofgj;ajesdofhjgosdhfoghjo;ajdfpgcjsdofjgosjdfogjc</p>
+        <div class="card-header ">Today is</div>
+        <div class="weather ">
+             <h2 class="city">City</h2>
+             <div class="degrees">50℉</div>
+             <div class="realFeel">Real Feel 48℉</div>
+             <icon></icon>
+             <div class="description">clear skys</div>
+               
         </div>
         </div>
+        <div class="card bg-secondary mb-3 col-sm-6 " style="max-width: 20rem;">
+            <div class="card-header ">Today is</div>
+            <div class="weather ">
+                 <h2 class="city">City</h2>
+                 <div class="degrees">50℉</div>
+                 <div class="realFeel">Real Feel 48℉</div>
+                 <icon></icon>
+                 <div class="description">harsh winds</div>
+                   
+            </div>
+            </div>
     </div>
 </section>          
  <script src="./assets/main.js" ></script> 
