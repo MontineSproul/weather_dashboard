@@ -1,13 +1,16 @@
 var apiKey = '0dff05e8fe26750242f5de6308aaff1f';
 
-https://api.openweathermap.org/data/2.5/forecast?q=Atlanta&units=imperial&appid=0dff05e8fe26750242f5de6308aaff1f
-
+// https://api.openweathermap.org/data/2.5/forecast?q=Atlanta&units=imperial&appid=0dff05e8fe26750242f5de6308aaff1f
+//weather api
+https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid=0dff05e8fe26750242f5de6308aaff1f
+//geo coding api
+http://api.openweathermap.org/geo/1.0/direct?q={city name},{state code},{country code}&limit={limit}&appid=0dff05e8fe26750242f5de6308aaff1f
 //moments/jquery to change the day of the week at the top of the card
-if (day is today) {
-    Today + date
-} else if (date ++) {
-    day of the week and date 
-}
+// if (day is today) {
+//     Today + date
+// } else if (date ++) {
+//     day of the week and date 
+// }
 
 
 //local storage in search bar
