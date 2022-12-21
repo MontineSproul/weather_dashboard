@@ -21,7 +21,10 @@
   
     
 }
-
+.real {
+    display: flex;
+    
+}
 .container {
     position: absolute;
     margin: 100px;
