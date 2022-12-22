@@ -27,7 +27,7 @@ document.querySelector('.clearHistory').addEventListener('click', function(){
     //local storage in search bar
     
     
-    function searchWeather(event) {
+function searchWeather(event) {
         event.preventDefault()
    
     // use searchCity to put it on the card
