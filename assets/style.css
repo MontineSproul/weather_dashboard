@@ -39,6 +39,11 @@
     border-radius: 5;
 }
 
-.deg {
+.deg,
+.city {
     padding-top: 48px;
+}
+
+.city {
+    padding-left: 50px;
 }
