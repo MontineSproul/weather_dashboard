@@ -47,3 +47,9 @@
 .city {
     padding-left: 50px;
 }
+
+
+
+li {
+    list-style: none;
+}

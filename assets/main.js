@@ -21,7 +21,7 @@ document.querySelector('.clearHistory').addEventListener('click', function(){
 //button for clear storage add event listener localStorage. clear item 
     //reading the localStorage item
     //local storage in search bar
-    
+
     
 function searchWeather(event) {
         event.preventDefault()
@@ -84,10 +84,17 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q=' + searchCity + '&unit
 })
 }
 
-
+// document.querySelector('.hist').addEventListener('click', function(event) {
+//     if(event.target.tagName === ".hist") {
+//         searchWeather(event.target.innerText);
+//     }
+// })
 //add event listener for search button 
 var searchBtn = document.getElementById('searchBtn');
 searchBtn.addEventListener('submit', searchWeather)
 //function that displays the day of the week in the header
-
+var searchHist = document.querySelector('.hist');
+searchHist.addEventListener('click', function(){
+    alert
+})
 //display weather in cards 
