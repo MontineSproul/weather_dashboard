@@ -65,16 +65,17 @@ function apiCalls(searchCity) {
         for (i=2; i <= 6; i++) {
 
             var day = data.list[(i -2) * 8] ;
+            var date = new Date(day.dt_txt);
        var degrees = document.querySelector('.degrees' + i);
-       degrees.innerHTML = day.main.temp;
+       degrees.innerHTML = "Degrees: " + day.main.temp;
        var realFeel = document.querySelector('.realFeel' + i);
-       realFeel.innerHTML = day.main.feels_like;
+       realFeel.innerHTML = "Real Feel: " + day.main.feels_like;
        var date = document.querySelector('.date' + i);
-       date.innerHTML = day.dt_txt;
+       date.innerHTML = day.date;
        var iconDescription = document.querySelector('.iconDescription' + i);
        iconDescription.src = `http://openweathermap.org/img/w/${day.weather[0].icon}.png`;
        var description = document.querySelector('.description' + i);
-         description.innerHTML = day.weather[0].description;
+         description.innerHTML = "Description: " + day.weather[0].description;
     }
     })
     // another fetch using the same 
@@ -90,13 +91,13 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q=' + searchCity + '&unit
     // var condition = data.weather[0];
 
    var degrees1 = document.querySelector('.degrees1');
-    degrees1.innerHTML = data.main.temp;
+    degrees1.innerHTML = "Degrees: " + data.main.temp;
    var realFeel1 = document.querySelector('.realFeel1');
-    realFeel1.innerHTML = data.main.feels_like;
+    realFeel1.innerHTML = "Real Feel: " + data.main.feels_like;
     var iconDescription = document.querySelector('.iconDescription1');
        iconDescription.src = `http://openweathermap.org/img/w/${data.weather[0].icon}.png`;
     var description1 = document.querySelector('.description1');
-    description1.innerHTML = data.weather[0].description;
+    description1.innerHTML = "Description: " + data.weather[0].description;
     // var date = document.querySelector('.date' + i);
     //    date.innerHTML = day.dt_txt;
 
