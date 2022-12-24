@@ -11,7 +11,10 @@ var savedCities = JSON.parse(localStorage.getItem("myCities")) || [];
 
 (function searchHistory() {
     for (i = 0; i < savedCities.length; i++) {
-      document.querySelector('.history' + i).innerHTML = savedCities[i];
+      document.querySelector('.history' + i).textContent = savedCities[i];
+      document.querySelector('.history' + i).addEventListener('click', function(event){
+            apiCalls(event.target.textContent)
+      })
     }
 } ) ();
 
@@ -27,13 +30,15 @@ function searchWeather(event) {
         event.preventDefault()
    
     // use searchCity to put it on the card
-    var searchCity = document.getElementById('cityName').value;
-    document.querySelector('.city').innerHTML = searchCity.toUpperCase(); 
+    var searchCity = document.getElementById('cityName').value; 
     savedCities.push(searchCity);
     localStorage.setItem("myCities", JSON.stringify(savedCities));
     console.log(localStorage);
+    apiCalls(searchCity)
+}
 
-
+function apiCalls(searchCity) {
+    document.querySelector('.city').innerHTML = searchCity.toUpperCase();
     fetch('https://api.openweathermap.org/data/2.5/forecast?q=' + searchCity + '&units=imperial&appid=0dff05e8fe26750242f5de6308aaff1f')
     .then(function(response){
         // console.log(response)
@@ -93,8 +98,5 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q=' + searchCity + '&unit
 var searchBtn = document.getElementById('searchBtn');
 searchBtn.addEventListener('submit', searchWeather)
 //function that displays the day of the week in the header
-var searchHist = document.querySelector('.hist');
-searchHist.addEventListener('click', function(){
-    alert
-})
+
 //display weather in cards 
