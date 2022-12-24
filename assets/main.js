@@ -65,13 +65,12 @@ function apiCalls(searchCity) {
         for (i=2; i <= 6; i++) {
 
             var day = data.list[(i -2) * 8] ;
-            var date = new Date(day.dt_txt);
        var degrees = document.querySelector('.degrees' + i);
        degrees.innerHTML = "Degrees: " + day.main.temp;
        var realFeel = document.querySelector('.realFeel' + i);
        realFeel.innerHTML = "Real Feel: " + day.main.feels_like;
        var date = document.querySelector('.date' + i);
-       date.innerHTML = day.date;
+       date.innerHTML = day.dt_txt;
        var iconDescription = document.querySelector('.iconDescription' + i);
        iconDescription.src = `http://openweathermap.org/img/w/${day.weather[0].icon}.png`;
        var description = document.querySelector('.description' + i);
