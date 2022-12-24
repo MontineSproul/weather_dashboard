@@ -9,17 +9,30 @@ var apiKey = '0dff05e8fe26750242f5de6308aaff1f';
 
 var savedCities = JSON.parse(localStorage.getItem("myCities")) || [];
 
-(function searchHistory() {
-    for (i = 0; i < savedCities.length; i++) {
+function searchHistory() {
+    var length = savedCities.length;
+    var list = document.querySelectorAll('.hist');
+    for (i = 0; i < list.length; i++) {
+        list[i].textContent = "";
+    }
+    if (savedCities.length > list.length) {
+         length = list.length;
+    }
+    for (i = 0; i < length; i++) {
       document.querySelector('.history' + i).textContent = savedCities[i];
       document.querySelector('.history' + i).addEventListener('click', function(event){
             apiCalls(event.target.textContent)
       })
     }
-} ) ();
+};
+searchHistory();
 
 document.querySelector('.clearHistory').addEventListener('click', function(){
+    console.log('hello')
     localStorage.removeItem('myCities');
+    savedCities = [];
+    searchHistory();
+
 })
 //button for clear storage add event listener localStorage. clear item 
     //reading the localStorage item
@@ -31,9 +44,11 @@ function searchWeather(event) {
    
     // use searchCity to put it on the card
     var searchCity = document.getElementById('cityName').value; 
+    document.getElementById('cityName').value = "";
     savedCities.push(searchCity);
     localStorage.setItem("myCities", JSON.stringify(savedCities));
     console.log(localStorage);
+    searchHistory()
     apiCalls(searchCity)
 }
 
